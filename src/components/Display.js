@@ -5,9 +5,7 @@ import { getDisp, reset } from "../features/disp/dispSlice";
 function Display() {
   const dispatch = useDispatch();
 
-  const { display, isLoading, isError, message } = useSelector(
-    (state) => state.display
-  );
+  const { display, isError, message } = useSelector((state) => state.display);
 
   useEffect(() => {
     if (isError) {
@@ -26,15 +24,15 @@ function Display() {
   return (
     <>
       {display.length > 0 && (
-        <table class="table-fixed m-5 p-5">
+        <table class="table-fixed m-5 p-5 mx-auto">
           <thead>
             <tr>
-              <th className="p-2">Id</th>
-              <th className="p-2">State</th>
-              <th className="p-2">Confirmed Cases</th>
-              <th className="p-2">Cases on Admissin</th>
-              <th className="p-2">Discharged </th>
-              <th className="p-2">Deaths Cases</th>
+              <th className="p-4">Id</th>
+              <th className="p-4">State</th>
+              <th className="p-4">Confirmed Cases</th>
+              <th className="p-4">Cases on Admissin</th>
+              <th className="p-4">Discharged </th>
+              <th className="p-4">Deaths Cases</th>
             </tr>
           </thead>
           <tbody>

@@ -7,27 +7,27 @@ function Pay() {
   const onClick = (e) => {
     navigate("/bill");
   };
+
   return (
     <>
       <div className="  w-3/5 mx-auto h-screen">
-        <p className="text-2xl"> Complete your Purchase</p>
-        <div className=" grid-cols-3 gap-3">
-          <div>
-            <p>Personal Info</p>
-          </div>
-          <div>
-            <p>Billing Info</p>
-          </div>
-          <div>
-            <p>Confirm Payment</p>
-          </div>
-        </div>
-
         <div className="mt-10 sm:mt-0">
-          <div className="">
+          <div>
             <p className="text-2xl"> Complete your Purchase</p>
 
-            <div className="mt-5 bg-gray-50 ">
+            <div className="flex flex-col mx-auto md:flex-row flex-wrap bg-white border-b  w-full rounded mt-4 justify-between">
+              <span className="inline-block px-4 py-3 underline-offset-4 hover:bg-gray-100 cursor-pointer border-b-4 border-orange-400 text-orange-500 ">
+                Personal Info
+              </span>
+              <span className="inline-block px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                Billing Info
+              </span>
+              <span className="inline-block px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                Confirm Payment
+              </span>
+            </div>
+
+            <div className="mt-5  ">
               <form>
                 <div className="shadow overflow-hidden sm:rounded-md">
                   <div className="px-4 py-5  sm:p-6">
