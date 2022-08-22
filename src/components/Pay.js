@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Pay() {
+  const navigate = useNavigate();
+
+  const onClick = (e) => {
+    navigate("/bill");
+  };
   return (
     <>
       <div className="  w-3/5 mx-auto h-screen">
-        <p> Complete your Purchase</p>
+        <p className="text-2xl"> Complete your Purchase</p>
         <div className=" grid-cols-3 gap-3">
           <div>
             <p>Personal Info</p>
@@ -19,18 +25,10 @@ function Pay() {
 
         <div className="mt-10 sm:mt-0">
           <div className="">
-            {/* <div className="md:col-span-1">
-              <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium leading-6 text-gray-900">
-                  Personal Information
-                </h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  Use a permanent address where you can receive mail.
-                </p>
-              </div>
-            </div> */}
+            <p className="text-2xl"> Complete your Purchase</p>
+
             <div className="mt-5 bg-gray-50 ">
-              <form action="#" method="POST">
+              <form>
                 <div className="shadow overflow-hidden sm:rounded-md">
                   <div className="px-4 py-5  sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
@@ -46,7 +44,7 @@ function Pay() {
                           name="first-name"
                           id="first-name"
                           autoComplete="given-name"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
                       </div>
 
@@ -62,7 +60,7 @@ function Pay() {
                           name="email-address"
                           id="email-address"
                           autoComplete="email"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
                       </div>
 
@@ -78,7 +76,7 @@ function Pay() {
                           name="street-address"
                           id="street-address"
                           autoComplete="street-address"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
                       </div>
 
@@ -94,7 +92,7 @@ function Pay() {
                           name="street-address"
                           id="street-address"
                           autoComplete="street-address"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
                       </div>
 
@@ -110,7 +108,7 @@ function Pay() {
                           name="first-name"
                           id="first-name"
                           autoComplete="given-name"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         />
                       </div>
 
@@ -125,7 +123,7 @@ function Pay() {
                           id="country"
                           name="country"
                           autoComplete="country-name"
-                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform dark:border-white border border-black rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 dark:focus:ring-black focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                          className="block w-full px-5 py-3 text-base transition bg-transparent duration-500 ease-in-out transform  border border-blue-800 rounded-lg text-neutral-600  focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
                         >
                           <option>Lagos</option>
                           <option>Oyo</option>
@@ -136,7 +134,7 @@ function Pay() {
                   </div>
                   <div className="px-4 py-3 bg-gray-50  sm:px-6">
                     <button
-                      type="submit"
+                      onClick={onClick}
                       className="inline-flex justify-center py-2 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                       Next

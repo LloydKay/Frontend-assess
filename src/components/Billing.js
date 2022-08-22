@@ -1,10 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Billing() {
+  const navigate = useNavigate();
+
+  const onClick = (e) => {
+    navigate("/bill2");
+  };
+
   return (
     <>
       <div className="mt-5 bg-gray-50 ">
-        <form action="#" method="POST">
+        <form>
           <div className="shadow overflow-hidden sm:rounded-md">
             <div className="px-4 py-5  sm:p-6">
               <div className="grid grid-cols-6 gap-6">
@@ -94,7 +101,7 @@ function Billing() {
             </div>
             <div className="px-4 py-3 bg-gray-50  sm:px-6">
               <button
-                type="submit"
+                onClick={onClick}
                 className="inline-flex justify-center py-2 px-12 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Next
